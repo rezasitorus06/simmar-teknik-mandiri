@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'DM Sans', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+    --color-ink: #17231f;
+    --color-moss: #295e4b;
+    --color-lime: #d6f36b;
+    --color-cream: #f4f2eb;
+}
+
+@layer base {
+    body { font-family: 'DM Sans', sans-serif; color: #17231f; background: #f4f2eb; }
+    h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; }
+}
+
+@layer components {
+    .container-page { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+    .eyebrow { letter-spacing: .14em; text-transform: uppercase; font-size: .7rem; font-weight: 700; }
+    .nav-link { color: #52605a; transition: color .2s ease; }
+    .nav-link:hover { color: #295e4b; }
+    .product-card { background: #fff; border: 1px solid #e2e6dc; transition: transform .25s ease, box-shadow .25s ease; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(41, 94, 75, .12); }
+    .field { width: 100%; border: 1px solid #d8ded5; background: #fff; padding: .75rem .9rem; outline: none; }
+    .field:focus { border-color: #295e4b; box-shadow: 0 0 0 3px rgba(41, 94, 75, .12); }
+}

@@ -11,6 +11,16 @@ use Illuminate\View\View;
 
 class ProductController extends Controller
 {
+    public function publicIndex(): View
+    {
+        return view('products.index', ['products' => Product::latest()->get()]);
+    }
+
+    public function show(Product $product): View
+    {
+        return view('products.show', ['product' => $product]);
+    }
+
     public function index(): View
     {
         return view('admin.products.index', ['products' => Product::latest()->get()]);
@@ -61,6 +71,7 @@ class ProductController extends Controller
             'category' => ['required', 'string', Rule::in(['Water Meter', 'Flow Meter'])],
             'short_description' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
+            'specifications' => ['nullable', 'string'],
             'image' => ['nullable', 'image', 'max:5120'],
             'video' => ['nullable', 'mimetypes:video/mp4,video/webm,video/quicktime', 'max:51200'],
             'is_featured' => ['nullable', 'boolean'],
@@ -68,6 +79,11 @@ class ProductController extends Controller
 
         $data['slug'] = Str::slug($data['name']);
         $data['is_featured'] = $request->boolean('is_featured');
+        $data['specifications'] = collect(preg_split('/\r\n|\r|\n/', (string) ($data['specifications'] ?? '')))
+            ->map(fn (string $line): array => array_map('trim', explode(':', $line, 2)))
+            ->filter(fn (array $parts): bool => count($parts) === 2 && $parts[0] !== '' && $parts[1] !== '')
+            ->mapWithKeys(fn (array $parts): array => [$parts[0] => $parts[1]])
+            ->all();
 
         if ($request->hasFile('image')) {
             if ($product->image_path) {

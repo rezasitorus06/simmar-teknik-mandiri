@@ -15,6 +15,7 @@ class Product extends Model
         'category',
         'short_description',
         'description',
+        'specifications',
         'image_path',
         'video_path',
         'is_featured',
@@ -24,6 +25,7 @@ class Product extends Model
     {
         return [
             'is_featured' => 'boolean',
+            'specifications' => 'array',
         ];
     }
 }

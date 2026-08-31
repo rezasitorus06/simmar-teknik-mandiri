@@ -7,7 +7,7 @@ use Illuminate\View\View;
 class AboutController extends Controller
 {
     /**
-     * Handle the incoming request.
+     * Menampilkan halaman tentang kami.
      */
     public function __invoke(): View
     {

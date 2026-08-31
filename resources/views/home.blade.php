@@ -2,7 +2,7 @@
 
 @section('content')
 <main>
-    <!-- Hero Section dengan Headline Kuat -->
+    <!-- Hero -->
     <section class="relative overflow-hidden bg-[#d8e6e8] py-20 md:py-28">
         <div class="container-page grid items-end gap-12 md:grid-cols-[1.05fr_.95fr]">
             <div class="relative z-10">
@@ -10,7 +10,7 @@
                 <h1 class="mt-5 max-w-2xl text-5xl font-semibold leading-[.98] tracking-tight text-ink md:text-7xl">Solusi Water Meter & Flow Meter <span class="text-moss">Terpercaya untuk Industri Anda</span></h1>
                 <p class="mt-7 max-w-md text-base leading-7 text-[#52605a]">Ratusan perusahaan mempercayai kami untuk pengukuran akurat, layanan purna jual terbaik, dan harga kompetitif di Indonesia.</p>
                 <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-                    <a href="{{ route('products.index') }}" class="primary-cta inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 text-sm font-bold">Lihat Semua Produk <span aria-hidden="true">&darr;</span></a>
+                    <a href="{{ route('products.index') }}" class="primary-cta inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 text-sm font-bold">Lihat semua produk <span aria-hidden="true">&darr;</span></a>
                     <a href="https://wa.me/{{ config('app.whatsapp', '6281234567890') }}?text={{ urlencode('Halo Simmar Teknik Mandiri, saya ingin mendapatkan penawaran khusus untuk water meter atau flow meter.') }}" target="_blank" class="secondary-cta inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-bold">Dapatkan Penawaran Khusus</a>
                 </div>
             </div>
@@ -22,7 +22,7 @@
         <div class="pointer-events-none absolute -right-16 -top-16 h-60 w-60 rounded-full border-[32px] border-white/30"></div>
     </section>
 
-    <!-- Section Keunggulan -->
+    <!-- Keunggulan -->
     <section class="bg-white py-16 md:py-24">
         <div class="container-page">
             <div class="text-center mb-12">
@@ -63,12 +63,12 @@
 
     <section id="tentang" class="container-page grid gap-10 py-24 md:grid-cols-[.7fr_1.3fr] md:py-32"><p class="eyebrow text-moss">01 &nbsp; Tentang Simmar</p><div><h2 class="max-w-3xl text-3xl font-semibold leading-tight md:text-5xl">Solusi pengukuran untuk aliran yang <span class="text-moss">lebih terkendali.</span></h2><p class="mt-7 max-w-2xl leading-7 text-[#66716b]">Simmar Teknik Mandiri membantu bisnis dan kontraktor menemukan perangkat pengukuran yang tepat. Kami menyediakan produk untuk jaringan air bersih, proses industri, gedung, dan sistem utilitas.</p><a href="{{ route('about') }}" class="mt-6 inline-flex font-bold text-moss">Kenali Simmar lebih jauh &rarr;</a></div></section>
 
-    <!-- Section FAQ -->
+    <!-- FAQ -->
     <section class="bg-[#faf9f5] py-16 md:py-24">
         <div class="container-page">
             <div class="mb-12">
                 <p class="eyebrow text-moss">Pertanyaan Umum</p>
-                <h2 class="mt-3 text-3xl font-semibold text-ink md:text-4xl">FAQ - Hal-hal yang Sering Ditanyakan</h2>
+                <h2 class="mt-3 text-3xl font-semibold text-ink md:text-4xl">Pertanyaan yang sering ditanyakan</h2>
             </div>
             <div class="grid gap-6 md:grid-cols-2">
                 <!-- FAQ 1 -->
@@ -114,7 +114,7 @@
                     <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80" alt="{{ $product->name }}" class="h-full w-full object-cover grayscale-[20%] transition duration-500 group-hover:scale-105">
                 @endif
                 @if ($product->is_featured)
-                    <span class="absolute left-4 top-4 rounded-full bg-lime px-3 py-1 text-[10px] font-bold uppercase tracking-wider">Featured</span>
+                    <span class="absolute left-4 top-4 rounded-full bg-lime px-3 py-1 text-[10px] font-bold uppercase tracking-wider">Unggulan</span>
                 @endif
             </div><div class="p-5"><p class="eyebrow text-[#7c8c83]">{{ $product->category ?: 'Produk' }}</p><h3 class="mt-2 text-xl font-semibold">{{ $product->name }}</h3><p class="mt-2 text-sm leading-6 text-[#6d7972]">{{ $product->short_description }}</p><span class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-moss">Lihat spesifikasi <span>&rarr;</span></span></div></a><div class="px-5 pb-5"><a href="https://wa.me/{{ config('app.whatsapp', '6281234567890') }}?text={{ urlencode('Halo Simmar Teknik Mandiri, saya tertarik dengan '.$product->name.'. Mohon info spesifikasi dan harga.') }}" target="_blank" class="text-sm font-bold text-moss">Minta penawaran via WhatsApp</a></div></article>
         @empty

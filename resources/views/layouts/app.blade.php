@@ -15,7 +15,7 @@
                 <a class="nav-link" href="{{ route('about') }}">Tentang kami</a>
                 <a class="nav-link" href="{{ route('home') }}#kontak">Kontak</a>
             </nav>
-            <a href="https://wa.me/{{ config('app.whatsapp', '6281234567890') }}?text={{ urlencode('Halo Simmar Teknik Mandiri, saya ingin berkonsultasi tentang water meter atau flow meter.') }}" target="_blank" class="primary-cta inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-bold">Konsultasi teknis</a>
+            <a href="https://wa.me/{{ config('app.whatsapp', '6281234567890') }}?text={{ urlencode('Halo Simmar Teknik Mandiri, saya ingin berkonsultasi tentang water meter atau flow meter.') }}" target="_blank" class="primary-cta inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-bold">Konsultasi gratis</a>
         </div>
     </header>
 

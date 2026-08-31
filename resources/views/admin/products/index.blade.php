@@ -19,7 +19,7 @@
 <main class="container-page py-12">
     <div class="flex items-end justify-between gap-4">
         <div>
-            <p class="eyebrow text-moss">Dashboard distributor</p>
+            <p class="eyebrow text-moss">Dashboard produk</p>
             <h1 class="mt-2 text-4xl font-semibold text-ink">Katalog produk</h1>
         </div>
         <a href="{{ route('admin.products.create') }}" class="primary-cta inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-bold">+ Tambah produk</a>

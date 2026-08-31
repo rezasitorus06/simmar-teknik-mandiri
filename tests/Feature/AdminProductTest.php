@@ -153,7 +153,7 @@ class AdminProductTest extends TestCase
     public function test_admin_product_image_validation(): void
     {
         $user = User::factory()->create();
-        // Membuat file yang terlalu besar (lebih dari 5MB yang diijinkan)
+        // Membuat file yang terlalu besar untuk batas maksimal 5MB
         $largeImage = UploadedFile::fake()->create('huge.jpg', 6000);
 
         $response = $this->actingAs($user)->from('/admin/products/create')
@@ -173,7 +173,7 @@ class AdminProductTest extends TestCase
     public function test_admin_product_video_validation(): void
     {
         $user = User::factory()->create();
-        // File bukan video
+        // File yang bukan format video
         $notVideo = UploadedFile::fake()->create('notavideo.txt', 100, 'text/plain');
 
         $response = $this->actingAs($user)->from('/admin/products/create')

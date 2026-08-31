@@ -13,7 +13,7 @@
         <a href="{{ route('admin.products.index') }}" class="text-sm font-bold text-moss">&larr; Kembali</a>
     </div>
 </header>
-<main class="container-page max-w-3xl py-12"><p class="eyebrow text-moss">Product editor</p><h1 class="mt-2 text-4xl font-semibold text-ink">{{ $heading }}</h1>
+<main class="container-page max-w-3xl py-12"><p class="eyebrow text-moss">Kelola produk</p><h1 class="mt-2 text-4xl font-semibold text-ink">{{ $heading }}</h1>
 <form method="POST" action="{{ $product->exists ? route('admin.products.update', $product) : route('admin.products.store') }}" enctype="multipart/form-data" class="mt-8 space-y-6 rounded-[26px] border border-[#dfe5dc] bg-white p-6 shadow-sm md:p-8">
     @csrf
     @if($product->exists) @method('PUT') @endif

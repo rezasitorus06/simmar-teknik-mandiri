@@ -2,8 +2,41 @@
 
 @section('content')
 <main>
-    <section class="bg-[#d8e6e8] py-20 md:py-28"><div class="container-page"><p class="eyebrow text-moss">Tentang kami</p><h1 class="mt-5 max-w-4xl text-5xl font-semibold leading-tight md:text-7xl">Mitra pengukuran untuk <span class="text-moss">aliran yang penting.</span></h1><p class="mt-7 max-w-2xl text-lg leading-8 text-[#52605a]">Simmar Teknik Mandiri adalah distributor water meter dan flow meter yang membantu kebutuhan pengukuran di berbagai sektor.</p></div></section>
-    <section class="container-page grid gap-12 py-20 md:grid-cols-[.65fr_1.35fr] md:py-28"><p class="eyebrow text-moss">01 &nbsp; Siapa kami</p><div><h2 class="text-3xl font-semibold leading-tight md:text-5xl">Perangkat tepat. Informasi jelas. Dukungan yang bisa diandalkan.</h2><p class="mt-7 leading-7 text-[#66716b]">Kami melayani pengadaan alat ukur untuk kontraktor, pengelola gedung, industri, dan sistem utilitas. Fokus kami adalah membantu Anda memilih perangkat sesuai ukuran pipa, jenis media, rentang aliran, dan kebutuhan instalasi.</p><p class="mt-5 leading-7 text-[#66716b]">Dengan komunikasi yang praktis dan penawaran yang transparan, kami siap mendampingi dari tahap konsultasi sampai kebutuhan produk Anda terpenuhi.</p></div></section>
-    <section class="border-y border-[#dfe5dc] bg-[#faf9f5] py-20"><div class="container-page grid gap-6 md:grid-cols-3"><div class="border-t-2 border-moss pt-5"><p class="eyebrow text-moss">01</p><h3 class="mt-3 text-xl font-semibold">Produk terukur</h3><p class="mt-3 text-sm leading-6 text-[#66716b]">Pilihan water meter dan flow meter untuk aplikasi yang beragam.</p></div><div class="border-t-2 border-moss pt-5"><p class="eyebrow text-moss">02</p><h3 class="mt-3 text-xl font-semibold">Konsultasi praktis</h3><p class="mt-3 text-sm leading-6 text-[#66716b]">Bantu memahami kebutuhan spesifikasi sebelum membeli.</p></div><div class="border-t-2 border-moss pt-5"><p class="eyebrow text-moss">03</p><h3 class="mt-3 text-xl font-semibold">Respon langsung</h3><p class="mt-3 text-sm leading-6 text-[#66716b]">Hubungi kami melalui WhatsApp untuk kebutuhan penawaran.</p></div></div></section>
+    <section class="bg-[#d8e6e8] py-20 md:py-28">
+        <div class="container-page">
+            <p class="eyebrow text-moss">Tentang kami</p>
+            <h1 class="mt-5 max-w-4xl text-5xl font-semibold leading-tight md:text-7xl">Mitra pengukuran untuk <span class="text-moss">aliran yang penting.</span></h1>
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-[#52605a]">Simmar Teknik Mandiri adalah distributor water meter dan flow meter yang membantu kebutuhan pengukuran di berbagai sektor.</p>
+        </div>
+    </section>
+
+    <section class="container-page grid gap-12 py-20 md:grid-cols-[.65fr_1.35fr] md:py-28">
+        <p class="eyebrow text-moss">01 &nbsp; Siapa kami</p>
+        <div>
+            <h2 class="text-3xl font-semibold leading-tight md:text-5xl">Perangkat tepat. Informasi jelas. Dukungan yang bisa diandalkan.</h2>
+            <p class="mt-7 leading-7 text-[#66716b]">Kami melayani pengadaan alat ukur untuk kontraktor, pengelola gedung, industri, dan sistem utilitas. Fokus kami adalah membantu Anda memilih perangkat sesuai ukuran pipa, jenis media, rentang aliran, dan kebutuhan instalasi.</p>
+            <p class="mt-5 leading-7 text-[#66716b]">Dengan komunikasi yang praktis dan penawaran yang transparan, kami siap mendampingi dari tahap konsultasi sampai kebutuhan produk Anda terpenuhi.</p>
+        </div>
+    </section>
+
+    <section class="border-y border-[#dfe5dc] bg-[#faf9f5] py-20">
+        <div class="container-page grid gap-6 md:grid-cols-3">
+            <div class="feature-card rounded-2xl border border-[#dfe5dc] bg-white p-6">
+                <p class="eyebrow text-moss">01</p>
+                <h3 class="mt-3 text-xl font-semibold">Produk terukur</h3>
+                <p class="mt-3 text-sm leading-6 text-[#66716b]">Pilihan water meter dan flow meter untuk aplikasi yang beragam.</p>
+            </div>
+            <div class="feature-card rounded-2xl border border-[#dfe5dc] bg-white p-6">
+                <p class="eyebrow text-moss">02</p>
+                <h3 class="mt-3 text-xl font-semibold">Konsultasi praktis</h3>
+                <p class="mt-3 text-sm leading-6 text-[#66716b]">Bantu memahami kebutuhan spesifikasi sebelum membeli.</p>
+            </div>
+            <div class="feature-card rounded-2xl border border-[#dfe5dc] bg-white p-6">
+                <p class="eyebrow text-moss">03</p>
+                <h3 class="mt-3 text-xl font-semibold">Respon langsung</h3>
+                <p class="mt-3 text-sm leading-6 text-[#66716b]">Hubungi kami melalui WhatsApp untuk kebutuhan penawaran.</p>
+            </div>
+        </div>
+    </section>
 </main>
 @endsection

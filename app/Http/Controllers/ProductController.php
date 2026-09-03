@@ -13,7 +13,10 @@ class ProductController extends Controller
 {
     public function publicIndex(): View
     {
-        return view('products.index', ['products' => Product::latest()->get()]);
+        return view('products.index', [
+            'products' => Product::latest()->get(),
+            'categories' => config('catalog.categories'),
+        ]);
     }
 
     public function show(Product $product): View
@@ -28,7 +31,11 @@ class ProductController extends Controller
 
     public function create(): View
     {
-        return view('admin.products.form', ['product' => new Product, 'heading' => 'Tambah produk']);
+        return view('admin.products.form', [
+            'product' => new Product,
+            'heading' => 'Tambah produk',
+            'categories' => config('catalog.categories'),
+        ]);
     }
 
     public function store(Request $request)
@@ -41,7 +48,11 @@ class ProductController extends Controller
 
     public function edit(Product $product): View
     {
-        return view('admin.products.form', ['product' => $product, 'heading' => 'Edit produk']);
+        return view('admin.products.form', [
+            'product' => $product,
+            'heading' => 'Edit produk',
+            'categories' => config('catalog.categories'),
+        ]);
     }
 
     public function update(Request $request, Product $product)
@@ -68,7 +79,8 @@ class ProductController extends Controller
     {
         $data = $request->validate([
             'name' => ['required', 'string', 'max:150'],
-            'category' => ['required', 'string', Rule::in(['Water Meter', 'Flow Meter'])],
+            'category' => ['required', 'string', Rule::in(array_merge(array_keys(config('catalog.categories')), ['Water Meter']))],
+            'subcategory' => ['nullable', 'string', Rule::in(config('catalog.categories.'.$request->input('category'), []))],
             'short_description' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
             'specifications' => ['nullable', 'string'],

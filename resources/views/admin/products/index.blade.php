@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Produk | Simmar Teknik Mandiri Admin</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/Logo-simmar.png') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-screen bg-[#f4f2eb]">
-<header class="border-b border-[#dfe5dc] bg-white/80 backdrop-blur-sm">
+<body class="min-h-screen bg-[#f3f8fc]">
+<header class="border-b border-[#d5e4f0] bg-white/85 backdrop-blur-sm">
     <div class="container-page flex h-20 items-center justify-between gap-4">
         <a href="{{ route('home') }}" aria-label="Simmar Teknik Mandiri" class="block h-12 w-20 shrink-0"><img src="{{ asset('images/Logo-simmar.png') }}" alt="Simmar Teknik Mandiri" class="h-full w-full object-contain"></a>
         <div class="flex items-center gap-4">
@@ -45,7 +46,7 @@
                         <tr>
                             <td class="px-5 py-4">
                                 <p class="font-bold text-ink">{{ $product->name }}</p>
-                                <p class="mt-1 text-xs text-[#859087]">{{ $product->is_featured ? 'Produk unggulan' : 'Produk biasa' }}</p>
+                                <p class="mt-1 text-xs text-[#859087]">{{ $product->subcategory ?: $product->category }} · {{ $product->is_featured ? 'Produk unggulan' : 'Produk biasa' }}</p>
                             </td>
                             <td class="px-5 py-4 text-[#66716b]">{{ $product->category ?: '-' }}</td>
                             <td class="px-5 py-4 text-xs text-[#66716b]">{{ $product->image_path ? 'Foto' : '' }} {{ $product->video_path ? 'Video' : '' }}</td>

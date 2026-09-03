@@ -41,7 +41,8 @@ class AdminProductTest extends TestCase
 
         $response = $this->actingAs($user)->post('/admin/products', [
             'name' => 'Meter Air Digital 1',
-            'category' => 'Water Meter',
+            'category' => 'Flow Meter',
+            'subcategory' => 'Flow meter digital',
             'short_description' => 'Deskripsi singkat produk baru',
             'description' => 'Deskripsi detail produk baru',
             'specifications' => "Ukuran: 1 inch\nTekanan: 10 bar",
@@ -51,7 +52,8 @@ class AdminProductTest extends TestCase
         $response->assertRedirect(route('admin.products.index'));
         $this->assertDatabaseHas('products', [
             'name' => 'Meter Air Digital 1',
-            'category' => 'Water Meter',
+            'category' => 'Flow Meter',
+            'subcategory' => 'Flow meter digital',
             'is_featured' => true,
         ]);
     }

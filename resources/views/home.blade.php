@@ -3,12 +3,12 @@
 @section('content')
 <main>
     <!-- Hero -->
-    <section class="relative overflow-hidden bg-[#d8e6e8] py-20 md:py-28">
+    <section class="relative overflow-hidden bg-[#d9eff9] py-20 md:py-28">
         <div class="container-page grid items-end gap-12 md:grid-cols-[1.05fr_.95fr]">
             <div class="relative z-10">
                 <p class="eyebrow text-moss">Simmar Teknik Mandiri</p>
                 <h1 class="mt-5 max-w-2xl text-5xl font-semibold leading-[.98] tracking-tight text-ink md:text-7xl">Solusi Water Meter & Flow Meter <span class="text-moss">Terpercaya untuk Industri Anda</span></h1>
-                <p class="mt-7 max-w-md text-base leading-7 text-[#52605a]">Ratusan perusahaan mempercayai kami untuk pengukuran akurat, layanan purna jual terbaik, dan harga kompetitif di Indonesia.</p>
+                <p class="mt-7 max-w-md text-base leading-7 text-[#53677e]">Ratusan perusahaan mempercayai kami untuk pengukuran akurat, layanan purna jual terbaik, dan harga kompetitif di Indonesia.</p>
                 <div class="mt-9 flex flex-col gap-3 sm:flex-row">
                     <a href="{{ route('products.index') }}" class="primary-cta inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 text-sm font-bold">Lihat semua produk <span aria-hidden="true">&darr;</span></a>
                     <a href="https://wa.me/{{ config('app.whatsapp', '6281234567890') }}?text={{ urlencode('Halo Simmar Teknik Mandiri, saya ingin mendapatkan penawaran khusus untuk water meter atau flow meter.') }}" target="_blank" class="secondary-cta inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-bold">Dapatkan Penawaran Khusus</a>
@@ -30,7 +30,7 @@
                 <h2 class="mt-3 text-3xl font-semibold text-ink md:text-4xl">Keunggulan yang Anda Butuhkan</h2>
             </div>
             <div class="grid gap-8 md:grid-cols-3">
-                <div class="feature-card rounded-2xl border border-[#dfe5dc] bg-white p-8">
+                <div class="feature-card rounded-2xl border border-[#d5e4f0] bg-white p-8">
                     <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-moss/10 text-moss mb-4">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -39,7 +39,7 @@
                     <h3 class="text-xl font-semibold text-ink mb-3">Akurasi Tinggi</h3>
                     <p class="text-[#66716b]">Pengukuran presisi hingga ±0.5% dengan sensor teknologi terkini untuk hasil yang dapat diandalkan setiap hari.</p>
                 </div>
-                <div class="feature-card rounded-2xl border border-[#dfe5dc] bg-white p-8">
+                <div class="feature-card rounded-2xl border border-[#d5e4f0] bg-white p-8">
                     <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-moss/10 text-moss mb-4">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -48,7 +48,7 @@
                     <h3 class="text-xl font-semibold text-ink mb-3">Garansi Resmi 2 Tahun</h3>
                     <p class="text-[#66716b]">Perlindungan penuh dengan garansi resmi dan dukungan teknis 24/7 dari tim ahli kami yang berpengalaman.</p>
                 </div>
-                <div class="feature-card rounded-2xl border border-[#dfe5dc] bg-white p-8">
+                <div class="feature-card rounded-2xl border border-[#d5e4f0] bg-white p-8">
                     <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-moss/10 text-moss mb-4">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.172l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5-4a2 2 0 11-4 0 2 2 0 014 0z"></path>
@@ -72,32 +72,32 @@
             </div>
             <div class="grid gap-6 md:grid-cols-2">
                 <!-- FAQ 1 -->
-                <div class="faq-card rounded-2xl border border-[#dfe5dc] bg-white p-6">
+                <div class="faq-card rounded-2xl border border-[#d5e4f0] bg-white p-6">
                     <h3 class="font-semibold text-ink text-lg mb-2">Bagaimana cara pemasangan water meter?</h3>
                     <p class="text-[#66716b] text-sm leading-6">Pemasangan water meter cukup sederhana. Kami menyediakan panduan instalasi lengkap dan dapat memberikan training gratis untuk tim Anda. Diperlukan waktu maksimal 2 jam untuk instalasi standar di sistem pipa Anda.</p>
                 </div>
                 <!-- FAQ 2 -->
-                <div class="faq-card rounded-2xl border border-[#dfe5dc] bg-white p-6">
+                <div class="faq-card rounded-2xl border border-[#d5e4f0] bg-white p-6">
                     <h3 class="font-semibold text-ink text-lg mb-2">Berapa lama masa garansi produk?</h3>
                     <p class="text-[#66716b] text-sm leading-6">Semua produk kami dilengkapi dengan garansi resmi selama 2 tahun sejak tanggal pembelian. Garansi mencakup kerusakan manufaktur dan ketidakakuratan pengukuran di atas batas toleransi yang ditetapkan.</p>
                 </div>
                 <!-- FAQ 3 -->
-                <div class="faq-card rounded-2xl border border-[#dfe5dc] bg-white p-6">
+                <div class="faq-card rounded-2xl border border-[#d5e4f0] bg-white p-6">
                     <h3 class="font-semibold text-ink text-lg mb-2">Apakah ada layanan maintenance rutin?</h3>
                     <p class="text-[#66716b] text-sm leading-6">Ya, kami menawarkan paket maintenance tahunan dengan harga terjangkau. Layanan termasuk pemeriksaan akurasi, kalibrasi ulang jika diperlukan, dan penggantian spare parts yang sudah aus.</p>
                 </div>
                 <!-- FAQ 4 -->
-                <div class="faq-card rounded-2xl border border-[#dfe5dc] bg-white p-6">
+                <div class="faq-card rounded-2xl border border-[#d5e4f0] bg-white p-6">
                     <h3 class="font-semibold text-ink text-lg mb-2">Bagaimana jika ada masalah teknis dengan produk?</h3>
                     <p class="text-[#66716b] text-sm leading-6">Tim support kami siap membantu 24/7 via WhatsApp, email, atau telepon. Untuk masalah yang memerlukan service on-site, kami dapat mengirimkan teknisi dalam 24 jam untuk area Jabodetabek.</p>
                 </div>
                 <!-- FAQ 5 -->
-                <div class="faq-card rounded-2xl border border-[#dfe5dc] bg-white p-6">
+                <div class="faq-card rounded-2xl border border-[#d5e4f0] bg-white p-6">
                     <h3 class="font-semibold text-ink text-lg mb-2">Apakah tersedia cicilan untuk pembelian?</h3>
                     <p class="text-[#66716b] text-sm leading-6">Tentu saja! Kami bekerja sama dengan beberapa bank dan fintech untuk menyediakan opsi cicilan 3-12 bulan tanpa bunga. Hubungi sales team kami untuk informasi lebih lanjut.</p>
                 </div>
                 <!-- FAQ 6 -->
-                <div class="faq-card rounded-2xl border border-[#dfe5dc] bg-white p-6">
+                <div class="faq-card rounded-2xl border border-[#d5e4f0] bg-white p-6">
                     <h3 class="font-semibold text-ink text-lg mb-2">Apa saja ukuran/spesifikasi yang tersedia?</h3>
                     <p class="text-[#66716b] text-sm leading-6">Kami menyediakan water meter dan flow meter dengan berbagai ukuran pipa (15mm hingga 300mm) dan range pengukuran yang berbeda. Konsultasikan kebutuhan Anda dengan tim kami untuk rekomendasi terbaik.</p>
                 </div>

@@ -4,11 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login Admin | Simmar Teknik Mandiri</title>
+	<link rel="icon" type="image/png" href="{{ asset('images/Logo-simmar.png') }}">
 	@vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="flex min-h-screen items-center justify-center bg-[#d8e6e8] p-5">
+	<body class="flex min-h-screen items-center justify-center bg-[#d9eff9] p-5">
 	<div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.65),transparent_40%)]"></div>
-	<main class="relative w-full max-w-md rounded-[28px] border border-[#dfe5dc] bg-white/90 p-8 shadow-[0_24px_60px_rgba(23,35,31,0.08)] backdrop-blur-sm md:p-10">
+	<main class="relative w-full max-w-md rounded-[28px] border border-[#d5e4f0] bg-white/90 p-8 shadow-[0_24px_60px_rgba(8,43,92,0.12)] backdrop-blur-sm md:p-10">
 		<a href="{{ route('home') }}" aria-label="Simmar Teknik Mandiri" class="block w-32 max-w-full"><img src="{{ asset('images/Logo-simmar.png') }}" alt="Simmar Teknik Mandiri" class="h-auto w-full object-contain"></a>
 		<p class="eyebrow mt-12 text-moss">Area admin</p>
 		<h1 class="mt-3 text-3xl font-semibold text-ink">Selamat datang kembali.</h1>

@@ -6,7 +6,7 @@
         <a href="{{ route('products.index') }}" class="text-sm font-bold text-moss">&larr; Kembali ke produk</a>
 
         <div class="mt-10 grid items-start gap-12 md:grid-cols-2">
-            <div class="overflow-hidden rounded-[22px] border border-[#dfe5dc] bg-[#d8e6e8] shadow-sm">
+            <div class="overflow-hidden rounded-[22px] border border-[#d5e4f0] bg-[#d9eff9] shadow-sm">
                 @if ($product->image_path)
                     <img src="{{ asset('storage/'.$product->image_path) }}" alt="{{ $product->name }}" class="h-full w-full object-cover">
                 @else
@@ -15,7 +15,14 @@
             </div>
 
             <div>
-                <p class="eyebrow text-moss">{{ $product->category }}</p>
+                <div class="mb-5 flex flex-wrap items-center gap-2 text-sm text-[#66716b]">
+                    <span>Kategori:</span>
+                    <span class="rounded-full bg-[#e7f3d2] px-3 py-1 font-semibold text-moss">{{ $product->category ?: 'Belum ditentukan' }}</span>
+                    @if ($product->subcategory)
+                        <span class="text-[#a0aaa3]">/</span>
+                        <span class="rounded-full border border-[#dfe5dc] bg-white px-3 py-1 font-semibold text-moss">{{ $product->subcategory }}</span>
+                    @endif
+                </div>
                 <h1 class="mt-4 text-4xl font-semibold leading-tight md:text-6xl">{{ $product->name }}</h1>
                 <p class="mt-6 text-lg leading-8 text-[#66716b]">{{ $product->short_description }}</p>
                 <a href="https://wa.me/{{ config('app.whatsapp', '6281234567890') }}?text={{ urlencode('Halo Simmar Teknik Mandiri, saya tertarik dengan '.$product->name.'. Mohon info spesifikasi dan harga.') }}" target="_blank" class="primary-cta mt-8 inline-flex rounded-full px-6 py-3.5 text-sm font-bold">Minta penawaran &rarr;</a>
@@ -23,14 +30,14 @@
         </div>
     </section>
 
-    <section class="border-y border-[#dfe5dc] bg-[#faf9f5] py-16 md:py-20">
+    <section class="border-y border-[#d5e4f0] bg-[#eef7fc] py-16 md:py-20">
         <div class="container-page grid gap-12 md:grid-cols-[1fr_.8fr]">
             <div>
                 <p class="eyebrow text-moss">Deskripsi produk</p>
                 <div class="mt-5 max-w-2xl whitespace-pre-line leading-8 text-[#52605a]">{{ $product->description ?: 'Informasi produk sedang diperbarui.' }}</div>
             </div>
 
-            <div class="rounded-2xl border border-[#dfe5dc] bg-white p-6">
+            <div class="rounded-2xl border border-[#d5e4f0] bg-white p-6">
                 <p class="eyebrow text-moss">Spesifikasi</p>
                 @if ($product->specifications)
                     <dl class="mt-5 divide-y divide-[#dfe5dc]">
